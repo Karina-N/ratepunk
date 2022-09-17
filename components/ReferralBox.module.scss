@@ -1,0 +1,50 @@
+@import "styles/mixins";
+
+// $color: red;
+
+.main {
+  //   color: $color;
+  background-color: #f8f4f9;
+  border: 1px solid #1f343e;
+  border-radius: 20px;
+  padding: 8% 4%;
+
+  @include desktop {
+    width: 48%;
+  }
+}
+
+.main p {
+  margin: 8% 0;
+}
+
+.main > p:last-child {
+  margin: 18% 0 0 0;
+  color: grey;
+}
+
+.main form {
+}
+
+.main form input,
+.main form button {
+  width: 100%;
+  margin-bottom: 6%;
+  height: 46px;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+.main form input {
+  border: none;
+  outline: 1px solid #1f343e;
+  padding: 5px 0;
+}
+
+.main form button {
+  background-color: #4eb3e3;
+  color: white;
+  border: 1px solid #1f343e;
+  height: 58px;
+  cursor: pointer;
+}

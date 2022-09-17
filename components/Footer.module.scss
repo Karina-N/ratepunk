@@ -1,0 +1,79 @@
+@import "styles/mixins";
+
+.footer {
+  background-color: #f8f4f9;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 20px;
+  padding: 8% 4%;
+
+  @include desktop {
+    flex-direction: row;
+    gap: 80px;
+    padding: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @include large-desktop {
+    padding-left: 18%;
+    padding-right: 18%;
+  }
+}
+
+.footerAbout {
+  width: 100%;
+
+  @include desktop {
+    width: 580px;
+  }
+}
+
+.footerAbout p {
+  margin: 20px 0;
+}
+
+.quickLinks {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.4;
+  width: 200px;
+}
+
+.quickLinks a {
+  text-decoration: none;
+  color: black;
+}
+
+.contactAndSocial {
+  line-height: 2.4;
+}
+
+#emailLink {
+  display: flex;
+  margin: 5px 0;
+}
+
+#emailLink:hover {
+  cursor: pointer;
+}
+
+#emailLink span {
+  margin-right: 10px;
+}
+
+#socialLinks {
+  margin-top: 10px;
+  width: 200px;
+}
+#socialLinks img {
+  background-color: #4eb3e3;
+  padding: 5px;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #1f343e;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}

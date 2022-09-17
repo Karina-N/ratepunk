@@ -1,0 +1,54 @@
+@import "styles/mixins";
+
+.storesBar {
+  background-color: #45565e;
+  color: white;
+}
+
+.storesBar .storesBarWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+
+  @include desktop {
+    flex-direction: row;
+    padding: 2% 10%;
+  }
+
+  @include large-desktop {
+    padding: 2% 18%;
+  }
+}
+
+.storesBarWrapper > div:last-child p span {
+  margin-right: 20px;
+}
+
+.singleStore {
+  border: 1px solid #1f343e;
+  border-radius: 7px;
+  display: flex;
+  gap: 10px;
+  width: 260px;
+  padding: 6px 16px;
+}
+
+.singleStore:hover {
+  cursor: pointer;
+}
+
+.singleStore img {
+  width: 54px;
+}
+
+.singleStore div p:nth-child(1) {
+  font-size: 14px;
+}
+
+.singleStore div p:nth-child(2) {
+  font-weight: bold;
+  font-size: 18px;
+}

@@ -1,0 +1,42 @@
+@import "styles/mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  font-family: "Caveat Brush", sans-serif;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: #4eb3e3;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.main-body {
+  padding: 10% 5%;
+  background-color: #f8cc5d;
+  padding-bottom: 0;
+
+  @include desktop {
+    display: flex;
+    padding: 5% 10%;
+  }
+
+  @include large-desktop {
+    padding: 5% 18%;
+  }
+}

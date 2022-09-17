@@ -1,0 +1,40 @@
+@import "styles/mixins";
+
+.navbar {
+  padding: 0.5% 5%;
+  border-bottom: 1px solid black;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @include large-desktop {
+    padding-left: 18%;
+    padding-right: 18%;
+  }
+}
+
+.navbar img:hover {
+  cursor: pointer;
+}
+.navbarLinks {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.navbarLinks a {
+  padding: 16px;
+  text-decoration: none;
+  color: #434a54;
+}
+
+.navbarLinks a:hover {
+  color: #4eb3e3;
+}
