@@ -1,11 +1,9 @@
 @import "styles/mixins";
-
-// $color: red;
+@import "styles/globalStyles";
 
 .main {
-  //   color: $color;
-  background-color: #f8f4f9;
-  border: 1px solid #1f343e;
+  background-color: $backgroundColor2;
+  border: 1px solid $darkGrey;
   border-radius: 20px;
   padding: 8% 4%;
 
@@ -20,31 +18,64 @@
 
 .main > p:last-child {
   margin: 18% 0 0 0;
-  color: grey;
+  color: $lightGrey;
+  font-size: 12px;
 }
 
-.main form {
+.emailMessage {
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.emailMessage .error {
+  color: red;
+  margin: 0;
+  font-size: 12px;
+}
+
+.emailMessage .success {
+  font-weight: bolder;
+  margin: 0;
+  font-size: 12px;
 }
 
 .main form input,
-.main form button {
+.main form button,
+.referralLink input,
+.referralLink button {
   width: 100%;
-  margin-bottom: 6%;
+  margin-bottom: 20px;
   height: 46px;
   border-radius: 7px;
   font-size: 16px;
 }
 
-.main form input {
+.main form input,
+.referralLink input {
   border: none;
-  outline: 1px solid #1f343e;
+  outline: 1px solid $darkGrey;
   padding: 5px 0;
+  text-indent: 20px;
+  color: $lightGrey;
 }
 
-.main form button {
-  background-color: #4eb3e3;
+.referralLink input {
+  width: 80%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.main form button,
+.referralLink button {
+  background-color: $blueColor;
   color: white;
-  border: 1px solid #1f343e;
+  border: 1px solid $darkGrey;
   height: 58px;
   cursor: pointer;
+}
+
+.referralLink button {
+  width: 20%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
