@@ -17,16 +17,15 @@ export function ReferralEmailInput(props) {
     if (checkIfEmailValid(email)) {
       props.handleMessage(true);
 
-      let req = new XMLHttpRequest();
-      let binId = "6326ed29a1610e63862f41a0";
-
-      req.open("PUT", `https://api.jsonbin.io/v3/b/${binId}`, true);
-      req.setRequestHeader("Content-Type", "application/json");
-      req.setRequestHeader(
-        "X-Master-Key",
-        "$2b$10$5Y3QMEr3.Bn38yGSlblxlehKBpxi9NtR0u9msoIqNgsWUYIS5ivJq"
-      );
-      req.send(JSON.stringify({ email: email }));
+      fetch("https://api.jsonbin.io/v3/b/6326ed29a1610e63862f41a0", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Master-Key":
+            "$2b$10$5Y3QMEr3.Bn38yGSlblxlehKBpxi9NtR0u9msoIqNgsWUYIS5ivJq",
+        },
+        body: JSON.stringify({ email: email }),
+      });
     } else {
       props.handleMessage(false);
     }
@@ -37,6 +36,7 @@ export function ReferralEmailInput(props) {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        <img src="/images/email icon.svg" />
         <input
           type="text"
           name="email"
@@ -44,6 +44,7 @@ export function ReferralEmailInput(props) {
           placeholder="Enter your email address"
           onChange={(e) => setEmail(e.target.value)}
         />
+
         <button type="submit">Get Refferal Link</button>
       </form>
     </>
