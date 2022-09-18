@@ -1,24 +1,26 @@
+@import "styles/globalStyles";
 @import "styles/mixins";
 
 * {
   padding: 0;
   margin: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: $mainFont;
 }
 
 h1,
 h2 {
   text-transform: uppercase;
-  font-family: "Caveat Brush", sans-serif;
+  font-family: $headlineFont1;
 }
 
 h3 {
   text-transform: uppercase;
-  color: #4eb3e3;
+  color: $blueColor;
 }
 
 h4 {
   text-transform: uppercase;
+  color: $blueColor;
 }
 
 p {
@@ -27,16 +29,14 @@ p {
 }
 
 .main-body {
-  padding: 10% 5%;
-  background-color: #f8cc5d;
-  padding-bottom: 0;
+  padding: 2rem 0;
+  background-color: $backgroundColor1;
+  border-top: 1px solid black;
+}
 
+.main-container {
   @include desktop {
     display: flex;
-    padding: 5% 10%;
-  }
-
-  @include large-desktop {
-    padding: 5% 18%;
+    gap: 60px;
   }
 }

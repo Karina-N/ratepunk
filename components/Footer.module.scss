@@ -1,24 +1,22 @@
+@import "styles/globalStyles";
 @import "styles/mixins";
 
+.footerContainer {
+  background-color: $backgroundColor2;
+}
 .footer {
-  background-color: #f8f4f9;
   display: flex;
   flex-direction: column;
-  font-size: 14px;
+  justify-content: center;
+  font-size: 16px;
   gap: 20px;
-  padding: 8% 4%;
+  padding-top: 40px;
 
   @include desktop {
     flex-direction: row;
     gap: 80px;
-    padding: 60px;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
-  @include large-desktop {
-    padding-left: 18%;
-    padding-right: 18%;
+    padding: 4rem 0;
+    position: relative;
   }
 }
 
@@ -48,6 +46,9 @@
 
 .contactAndSocial {
   line-height: 2.4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #emailLink {
@@ -68,12 +69,24 @@
   width: 200px;
 }
 #socialLinks img {
-  background-color: #4eb3e3;
+  background-color: $blueColor;
   padding: 5px;
   height: 16px;
   width: 16px;
-  border: 1px solid #1f343e;
+  border: 1px solid $darkGrey;
   border-radius: 5px;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.copyRight {
+  color: $lightGrey;
+  margin-bottom: 30px;
+
+  @include desktop {
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+  }
 }

@@ -1,15 +1,19 @@
 import { Layout } from "../components/layout";
-
+import Section from "../components/Section";
 import { ReferralBox } from "../components/ReferralBox";
 import { Steps } from "../components/Steps";
-import { StoresBar } from "../components/storesBar";
+import { StoresBar } from "../components/StoresBar";
 
 export default function Home() {
   return (
     <>
       <div className="main-body">
-        <ReferralBox />
-        <Steps />
+        <Section>
+          <div className="main-container">
+            <ReferralBox />
+            <Steps />
+          </div>
+        </Section>
       </div>
       <StoresBar />
     </>

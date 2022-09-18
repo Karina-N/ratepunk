@@ -21,20 +21,21 @@ export function ReferralBox() {
 
   return (
     <div className={styles.main}>
-      <h1>Refer friends and get rewards</h1>
-      <p>
-        Refer your freinds to us andf earn hotel booking vouchers. We'll give
-        you 1 coin for each friend that installs our extension. Minimum cash-out
-        at 20 coins.
-      </p>
-      <div className={styles.emailMessage}>{message}</div>
+      <div>
+        <h1>Refer friends and get rewards</h1>
+        <p>
+          Refer your freinds to us andf earn hotel booking vouchers. We'll give
+          you 1 coin for each friend that installs our extension. Minimum
+          cash-out at 20 coins.
+        </p>
+        <div className={styles.emailMessage}>{message}</div>
 
-      {emailCorrect ? (
-        <ReferralCode />
-      ) : (
-        <ReferralEmailInput message={message} handleMessage={showMessage} />
-      )}
-
+        {emailCorrect ? (
+          <ReferralCode />
+        ) : (
+          <ReferralEmailInput message={message} handleMessage={showMessage} />
+        )}
+      </div>
       <p>Limits on max rewards apply.</p>
     </div>
   );

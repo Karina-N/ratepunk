@@ -1,5 +1,6 @@
 import styles from "./StoresBar.module.scss";
 import { SingleStore } from "./SingleStore";
+import Section from "./Section";
 
 export function StoresBar() {
   const stores = [
@@ -21,25 +22,27 @@ export function StoresBar() {
 
   return (
     <div className={styles.storesBar}>
-      <div className={styles.storesBarWrapper}>
-        {stores.map((store) => {
-          return (
-            <SingleStore
-              src={store.src}
-              alt={store.alt}
-              key={store.id}
-              title={store.title}
-              link={store.link}
-            />
-          );
-        })}
-        <div>
-          <p>
-            <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-            Chrome Store Reviews
-          </p>
+      <Section>
+        <div className={styles.storesBarWrapper}>
+          {stores.map((store) => {
+            return (
+              <SingleStore
+                src={store.src}
+                alt={store.alt}
+                key={store.id}
+                title={store.title}
+                link={store.link}
+              />
+            );
+          })}
+          <div className={styles.reviewsStars}>
+            <p>
+              <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+              Chrome Store Reviews
+            </p>
+          </div>
         </div>
-      </div>
+      </Section>
     </div>
   );
 }

@@ -5,19 +5,17 @@
   background-color: $backgroundColor2;
   border: 1px solid $darkGrey;
   border-radius: 20px;
-  padding: 8% 4%;
-
-  @include desktop {
-    width: 48%;
-  }
+  padding: 40px 40px 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main p {
-  margin: 8% 0;
+  margin: 20px 0;
 }
 
 .main > p:last-child {
-  margin: 18% 0 0 0;
   color: $lightGrey;
   font-size: 12px;
 }
@@ -50,12 +48,23 @@
   font-size: 16px;
 }
 
+.main form {
+  position: relative;
+}
+
+.main img {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  height: 16px;
+}
+
 .main form input,
 .referralLink input {
   border: none;
   outline: 1px solid $darkGrey;
   padding: 5px 0;
-  text-indent: 20px;
+  text-indent: 40px;
   color: $lightGrey;
 }
 
