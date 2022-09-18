@@ -8,16 +8,6 @@ export function ReferralBox() {
   const [emailCorrect, setEmailCorrect] = useState(false);
 
   const showMessage = (emailCorrect) => {
-    //   if (emailCorrect) {
-    //     setMessage(<p className={styles.success}>Your email is confirmed!</p>);
-    //     setEmailCorrect(true);
-    //   } else {
-    //     setMessage(
-    //       <p className={styles.error}>Error State</p> && setEmailCorrect(false)
-    //     );
-    //   }
-    // };
-
     let newMessage = emailCorrect ? (
       <p className={styles.success}>Your email is confirmed!</p>
     ) : (

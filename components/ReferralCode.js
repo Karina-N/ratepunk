@@ -8,11 +8,11 @@ export function ReferralCode() {
   );
 
   const copyReferralLink = () => {
-    let code = document.getElementById("referralLink");
-    code.select();
-    code.setSelectionRange(0, 99999);
+    let referralString = document.getElementById("referralLink");
+    referralString.select();
+    referralString.setSelectionRange(0, 99999);
 
-    navigator.clipboard.writeText(code.value);
+    navigator.clipboard.writeText(referralString.value);
   };
 
   return (

@@ -1,4 +1,3 @@
-import styles from "./ReferralBox.module.scss";
 import { useState } from "react";
 
 export function ReferralEmailInput(props) {
@@ -15,9 +14,22 @@ export function ReferralEmailInput(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    checkIfEmailValid(email)
-      ? props.handleMessage(true)
-      : props.handleMessage(false);
+    if (checkIfEmailValid(email)) {
+      props.handleMessage(true);
+
+      let req = new XMLHttpRequest();
+      let binId = "6326ed29a1610e63862f41a0";
+
+      req.open("PUT", `https://api.jsonbin.io/v3/b/${binId}`, true);
+      req.setRequestHeader("Content-Type", "application/json");
+      req.setRequestHeader(
+        "X-Master-Key",
+        "$2b$10$5Y3QMEr3.Bn38yGSlblxlehKBpxi9NtR0u9msoIqNgsWUYIS5ivJq"
+      );
+      req.send(JSON.stringify({ email: email }));
+    } else {
+      props.handleMessage(false);
+    }
 
     setEmail("");
   };
