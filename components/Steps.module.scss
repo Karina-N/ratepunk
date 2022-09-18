@@ -1,7 +1,8 @@
 @import "styles/mixins";
+@import "styles/globalStyles";
 
 .steps {
-  padding: 40px 0;
+  padding: 20px 0;
   text-align: center;
 
   @include desktop {
@@ -23,7 +24,7 @@
 }
 
 .singleStep {
-  padding-bottom: 40px;
+  padding-top: 40px;
 
   @include desktop {
     display: flex;
@@ -43,4 +44,8 @@
   @include desktop {
     margin-left: 20px;
   }
+}
+
+.singleStepText h4 {
+  color: $blueColor;
 }
